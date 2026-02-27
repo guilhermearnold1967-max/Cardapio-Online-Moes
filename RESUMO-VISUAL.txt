@@ -1,0 +1,400 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║          🍔 CARDÁPIO ONLINE RESPONSIVO - SISTEMA COMPLETO 🍔                  ║
+║                                                                               ║
+║                 Arquivo Único | Mobile-First | WhatsApp Ready                ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          📁 ARQUIVOS INCLUSOS                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  ✅ cardapio-online.html          ← ABRA ESTE ARQUIVO NO NAVEGADOR
+  📖 README.md                     ← Índice e visão geral
+  ⚡ GUIA-RAPIDO.md               ← 5 MINUTOS para começar (comece aqui!)
+  📚 DOCUMENTACAO.md              ← Documentação completa
+  💡 EXEMPLOS-PRATICOS.md         ← Exemplos prontos (pizzaria, sushi, café...)
+  ❓ FAQ-TROUBLESHOOTING.md        ← Dúvidas e soluções
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      🚀 COMEÇAR EM 5 MINUTOS                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  PASSO 1: Abra o arquivo
+  └─ Clique duplo em: cardapio-online.html
+  └─ Deve abrir no navegador automaticamente ✅
+
+  PASSO 2: Altere o número WhatsApp
+  └─ Abra em editor (Bloco de Notas, VS Code)
+  └─ Procure: const WHATSAPP_NUMBER = '5549999999999'
+  └─ Trocar para seu número: 55 + DDD + NÚMERO
+  └─ Exemplo: '5511987654321' (São Paulo)
+
+  PASSO 3: Adicione seus produtos
+  └─ Procure: const PRODUCTS = [
+  └─ Altere nome, descrição, preço, imagem
+  └─ Mínimo 3 produtos para uma boa apresentação
+
+  PASSO 4: Salve e teste
+  └─ Ctrl+S (salvar)
+  └─ F5 (recarregar página)
+  └─ Teste: Produto → Carrinho → Finalizar → WhatsApp
+
+  PASSO 5: Compartilhe (opcional)
+  └─ Localmente: abra arquivo
+  └─ Online: Netlify.com (arrastar arquivo)
+  └─ Servidor: FTP para seu hosting
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     ✨ FUNCIONALIDADES INCLUÍDAS                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  🛒 CARRINHO
+     • Adicionar/remover produtos
+     • Ajustar quantidade
+     • Observações personalizadas
+     • Persiste no localStorage
+     • Badge mostra quantidade
+
+  💳 CHECKOUT (2 ETAPAS)
+     Etapa 1: Pagamento
+        - Dinheiro, PIX, Débito, Crédito
+        - Campo "Troco para" (opcional)
+        - Observação geral do pedido
+
+     Etapa 2: Endereço
+        - CEP auto-completa cidade/estado
+        - Integração API ViaCEP (gratuita)
+        - Campos: nome, telefone, rua, número, bairro, etc
+
+  📱 RESPONSIVIDADE
+     • Mobile-first design
+     • Desktop com drawer lateral
+     • Funciona em todos navegadores modernos
+     • Testes: Chrome, Firefox, Safari, Edge
+
+  🔗 WHATSAPP
+     • Mensagem pré-formatada
+     • Contém: itens, observações, total, endereço
+     • Abre wa.me automaticamente
+     • Sem necessidade de API/Token
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     📊 FLUXO DO USUÁRIO (RESUMIDO)                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+   VISUALIZAR CARDÁPIO
+        ↓
+   CLIQUE EM "ADICIONAR"
+        ↓
+   AJUSTE QUANTIDADE + OBSERVAÇÕES
+        ↓
+   "ADICIONAR AO CARRINHO"
+        ↓
+   REPITA PARA MAIS PRODUTOS (opcional)
+        ↓
+   CLIQUE NO ÍCONE 🛒 (carrinho)
+        ↓
+   "FINALIZAR PEDIDO"
+        ↓
+   ETAPA 1: Selecione forma de pagamento
+        ↓
+   ETAPA 2: Preencha endereço
+        ↓
+   "ENVIAR PEDIDO PARA WHATSAPP"
+        ↓
+   ✅ WHATSAPP ABRE COM MENSAGEM PRONTA
+        ↓
+   ✅ CLIENTE ENVIA E VOCÊ RECEBE
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                  🎨 ALTERAÇÕES PRINCIPAIS (COPY-PASTE)                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  1️⃣ MUDAR NÚMERO WHATSAPP
+  ─────────────────────────
+  Procurar:   const WHATSAPP_NUMBER = '5549999999999';
+  Trocar por: const WHATSAPP_NUMBER = '5511987654321'; (seu número)
+  Localização: linha ~665
+
+
+  2️⃣ MUDAR NOME DA LOJA
+  ─────────────────────
+  Procurar:   <div class="header-logo">Sabor & Cia</div>
+  Trocar por: <div class="header-logo">🍕 Sua Pizzaria</div>
+  Localização: linha ~49
+
+
+  3️⃣ MUDAR CORES (exemplo: vermelho para pizzaria)
+  ──────────────────────────────────────────────────
+  Procurar:   --primary: #ff6b35;
+  Trocar por: --primary: #d32f2f; (vermelho)
+  Localização: linha ~19
+
+  Outras cores:
+    --primary-dark: #b71c1c;
+    --secondary: #2ecc71;
+    --accent: #1b5e20;
+
+
+  4️⃣ MUDAR PRODUTOS
+  ───────────────
+  Procurar:    const PRODUCTS = [
+  Localização: linha ~668
+  
+  Alterar ou adicionar:
+  {
+      id: 1,
+      name: 'Seu Produto',
+      description: 'Descrição aqui',
+      price: 29.90,
+      image: 'https://url-imagem.jpg'
+  }
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      📱 COMPATIBILIDADE & REQUISITOS                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  ✅ FUNCIONA EM:
+     • Chrome, Firefox, Safari, Edge (últimas 2 versões)
+     • Desktop: Windows, Mac, Linux
+     • Mobile: iPhone (iOS 14+), Android (Chrome)
+     • Tablet: iPad, Android Tablets
+
+  ✅ NÃO PRECISA DE:
+     ✓ Servidor web
+     ✓ Banco de dados
+     ✓ Backend/API (exceto ViaCEP para CEP)
+     ✓ Node.js / npm
+     ✓ Instalação
+     ✓ Configuração complexa
+
+  ⚠️ REQUER:
+     • Navegador moderno
+     • Conexão internet (para imagens + CEP)
+     • WhatsApp instalado (para abrir link)
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        🎯 CASOS DE USO                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  ✅ Restaurante / Hamburgueria
+  ✅ Pizzaria
+  ✅ Cafeteria / Padaria
+  ✅ Sushi / Asiático
+  ✅ Pastelaria / Lanches
+  ✅ Bar / Boteco
+  ✅ Doceria / Sorveteria
+  ✅ Delivery em geral
+  ✅ E qualquer restaurante que queira cardápio online!
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      📚 DOCUMENTAÇÃO RECOMENDADA                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  🆕 PRIMEIRA VEZ?
+     → Leia: GUIA-RAPIDO.md (5 min)
+
+  🔧 QUER CUSTOMIZAR?
+     → Leia: EXEMPLOS-PRATICOS.md
+     → Inclui: pizzaria, sushi, café, lanchonete, etc
+
+  ❓ TEM DÚVIDAS?
+     → Leia: FAQ-TROUBLESHOOTING.md
+     → Inclui: perguntas frequentes + soluções
+
+  📖 QUER TUDO DETALHADO?
+     → Leia: DOCUMENTACAO.md
+     → Inclui: documentação técnica completa
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      ⚡ PALETAS DE COR PRONTAS                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  PADRÃO (Laranja/Azul)
+  --primary: #ff6b35;       --accent: #004e89;
+
+  PIZZARIA (Vermelho/Verde)
+  --primary: #d32f2f;       --accent: #1b5e20;
+
+  SUSHI (Vermelho/Roxo)
+  --primary: #c41e3a;       --accent: #4b0082;
+
+  CAFÉ (Marrom/Bege)
+  --primary: #8b4513;       --accent: #5c2e0a;
+
+  LANCHONETE (Amarelo/Azul)
+  --primary: #f9a825;       --accent: #004e89;
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      🌐 COLOCAR ONLINE (GRATUITO)                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  OPÇÃO 1: Netlify (MAIS FÁCIL) ⭐
+  ─────────────────────────────
+  1. Ir em: netlify.com
+  2. Arrastar arquivo cardapio-online.html
+  3. Pronto! Link gerado: exemplo123.netlify.app
+  4. Compartilhar link
+  ✅ Tempo: 30 segundos
+
+
+  OPÇÃO 2: GitHub Pages
+  ──────────────────
+  1. Criar conta: github.com
+  2. Novo repositório
+  3. Upload do arquivo
+  4. Ativar Pages nas settings
+  5. Link gerado: usuario.github.io/cardapio
+
+
+  OPÇÃO 3: Seu Servidor/Hosting
+  ─────────────────────────────
+  1. FTP para seu hosting
+  2. Salvar em: /public_html/cardapio-online.html
+  3. Acessar: seusite.com/cardapio-online.html
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      ❌ PROBLEMAS COMUNS & SOLUÇÕES                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  PROBLEMA: Página fica branca
+  SOLUÇÃO:  Abrir F12 (console) → verificar erros
+            Causa: vírgula ou parêntese faltando
+
+  PROBLEMA: Imagens não carregam
+  SOLUÇÃO:  Usar URL válida que comece com http
+            Exemplo correto: https://images.unsplash.com/...
+
+  PROBLEMA: CEP não auto-completa
+  SOLUÇÃO:  Verificar internet + CEP com 8 dígitos
+            Testar em: viacep.com.br
+
+  PROBLEMA: WhatsApp não abre
+  SOLUÇÃO:  Número no formato 55+DDD+número (sem caracteres)
+            Exemplo: 5511987654321
+
+  → Mais soluções em: FAQ-TROUBLESHOOTING.md
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      ✅ CHECKLIST ANTES DE USAR                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  [  ] Arquivo aberto e funcionando no navegador
+  [  ] Número WhatsApp alterado
+  [  ] Mínimo 3-5 produtos adicionados
+  [  ] Todas imagens carregando corretamente
+  [  ] Nome da loja atualizado
+  [  ] Cores personalizadas (se desejado)
+  [  ] Testado em celular (responsividade)
+  [  ] Fluxo completo testado (produto → WhatsApp)
+  [  ] CEP auto-completa testado
+  [  ] Link compartilhado/divulgado
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      🚀 PRÓXIMOS PASSOS                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  IMEDIATO (Hoje):
+  ✅ Abrir cardapio-online.html
+  ✅ Trocar número WhatsApp
+  ✅ Adicionar seus 3-5 primeiros produtos
+  ✅ Salvar e testar
+
+  CURTO PRAZO (Esta semana):
+  ✅ Publicar online (Netlify)
+  ✅ Compartilhar link em redes sociais
+  ✅ Adicionar QR code
+  ✅ Começar a receber pedidos
+
+  MÉDIO PRAZO (Próximo mês):
+  ✅ Analisar quais produtos vendem mais
+  ✅ Otimizar descrições e fotos
+  ✅ Adicionar mais produtos
+  ✅ Melhorar design conforme feedback
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      💡 DICAS PARA AUMENTAR VENDAS                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  1. FOTOS DE ALTA QUALIDADE
+     → Melhor foto = mais vendas
+     → Use Unsplash, Pexels ou suas próprias fotos
+
+  2. DESCRIÇÃO CLARA E ATRATIVA
+     → Evite muito texto
+     → Use palavras que vendem: fresco, quente, delicioso, etc
+
+  3. PREÇO BEM VISÍVEL
+     → Aumentar fonte do preço
+     → Destacar com cor
+
+  4. BOTÃO CHAMATIVO
+     → "Adicionar" bem visível
+     → Cor contrastante
+
+  5. OBSERVAÇÕES
+     → "Sem cebola", "bem passado", etc
+     → Personaliza a experiência
+
+  6. CEP OBRIGATÓRIO
+     → Valida o cliente
+     → Evita pedidos fake
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      📞 PRECISA DE AJUDA?                                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  1. Dúvida rápida?
+     → Leia: GUIA-RAPIDO.md (5 minutos)
+
+  2. Como customizar?
+     → Leia: EXEMPLOS-PRATICOS.md (copy-paste)
+
+  3. Tem um problema?
+     → Leia: FAQ-TROUBLESHOOTING.md (soluções)
+
+  4. Quer entender tudo?
+     → Leia: DOCUMENTACAO.md (completo)
+
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                    🎉 PARABÉNS! VOCÊ TEM UM CARDÁPIO                         ║
+║                          ONLINE PROFISSIONAL! 🎉                             ║
+║                                                                               ║
+║                         Basta começar a usar e vender!                       ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+ARQUIVOS INCLUSOS:
+
+1. cardapio-online.html      ← ARQUIVO PRINCIPAL (abra aqui!)
+2. README.md                 ← Índice geral
+3. GUIA-RAPIDO.md           ← Comece por aqui (5 min)
+4. DOCUMENTACAO.md          ← Completo e detalhado
+5. EXEMPLOS-PRATICOS.md     ← Pizzaria, sushi, café, etc
+6. FAQ-TROUBLESHOOTING.md   ← Dúvidas e soluções
+
+COMECE POR: GUIA-RAPIDO.md (5 minutos) ⚡
+
+═══════════════════════════════════════════════════════════════════════════════════
